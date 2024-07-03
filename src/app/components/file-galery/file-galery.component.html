@@ -1,15 +1,15 @@
 <div class="file-galery-container" [ngStyle]="{'display': isUploadFile ? 'none' : 'flex' }">
     <ul class="left-tabbed-menu">
-        <li [class.active]="leftTabActiveIndex == 0" (click)="leftTabActiveIndex=0">File gallery</li>
-        <li [class.active]="leftTabActiveIndex == 1" (click)="leftTabActiveIndex=1">Upload your file</li>
+        <!-- <li [class.active]="leftTabActiveIndex == 0" (click)="leftTabActiveIndex=0">File gallery</li> -->
+        <li [class.active]="leftTabActiveIndex == 0" (click)="leftTabActiveIndex=1">Upload your file</li>
     </ul>
     <div class="main-content">
         <div class="rx-modal-dialog-header">
             <img class="close" src="/assets/images/close-modal-ico.svg" (click)="handleCloseModalFileGalery()" />
-            <span class="title">FILE GALLERY</span>
+            <span class="title">Upload your file</span>
         </div>
         <div [ngSwitch]="leftTabActiveIndex">
-            <div *ngSwitchDefault>
+            <!-- <div *ngSwitchDefault>
                 <div class="tabbed-menu">
                     <div
                         *ngFor="let group of groups;"
@@ -24,7 +24,6 @@
                         *ngFor="let item of selected.items;"
                         class="tile"
                         (click)="handleFileSelect(item)">
-                            <!-- <div class="thumbnail"><img src="{{item.thumbnail}}" /></div> -->
                             <div class="thumbnail"></div>
                             <div class="title">{{item.name}}</div>
                     </div>
@@ -32,8 +31,8 @@
                     <br>
                     <p class="copyright">PDF Reader powered by Foxit. Copyright (c) 2003-2024 by Foxit Software Incorporated</p>
                 </div>
-            </div>
-            <div *ngSwitchCase="1">
+            </div> -->
+            <div *ngSwitchDefault>
                 <rx-dnd-zone (onDrop)="onDrop($event)">
                     <div class="dnd-content" (click)="onChooseClick()">
                         <input

@@ -634,7 +634,6 @@ export class RXCore {
                 "FrontColor": frontRgbColor,
                 "EqualColor": equalRgbColor,
                 "ReturnData": "text",
-                //"DestFolder": "C:/Rasterex/Upload",
                 "DestFolder":`${RXCore.Config.UploadServerfolder.replaceAll('\\', '/')}`,
                 "OutputName": outputName,
             }];
